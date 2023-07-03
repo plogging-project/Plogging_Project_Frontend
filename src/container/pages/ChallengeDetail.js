@@ -236,7 +236,7 @@ const ChallengeDetail = () => {
       window.alert("챌린지 가입이 완료되었습니다")
     }
     if(confirmed) {
-      fetch(`http://localhost:8080/challenge/chDetail/${chNo}`,{
+      fetch(`http://13.209.48.33:8080/challenge/chDetail/${chNo}`,{
         method:"POST",
         headers: {
           "Content-type":"application/json; charset=utf-8",Authorization: `Bearer ${getItem('ACCESS_TOKEN')}`
@@ -288,7 +288,7 @@ console.log("challengeScheduleList : " , challengeScheduleList)
       };
       console.log(schObj);
 
-      fetch("http://localhost:8080/scheduleJoin",{
+      fetch("http://13.209.48.33:8080/scheduleJoin",{
         method:"POST",
         headers: {
           "Content-type":"application/json; charset=utf-8",Authorization: `Bearer ${getItem('ACCESS_TOKEN')}`
